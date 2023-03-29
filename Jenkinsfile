@@ -17,7 +17,7 @@ pipeline {
 
         stage("Deploy"){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-signin', path: '', url: 'http://localhost:8090')], contextPath: 'hcl', onFailure: false, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-signin', path: '', url: 'http://localhost:8090/')], contextPath: 'hcl', war: '**/*.war'
             }
         }
     }
